@@ -1,0 +1,13 @@
+hello#hellow
+h(0)
+he(0)
+hel(0)
+hell(0)
+hello(0)
+hello#(0)
+hello#h (1)
+hello#he (2)
+hello#hel (3)
+hello#hell (4)
+hello#hello (5)
+hello#hellow (0)

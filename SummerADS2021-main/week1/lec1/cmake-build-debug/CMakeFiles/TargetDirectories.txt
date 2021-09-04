@@ -1,0 +1,5 @@
+/Users/bsnbk/Documents/kbtu-summer/algo/week1/lec1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/bsnbk/Documents/kbtu-summer/algo/week1/lec1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/bsnbk/Documents/kbtu-summer/algo/week1/lec1/cmake-build-debug/CMakeFiles/3.dir
+/Users/bsnbk/Documents/kbtu-summer/algo/week1/lec1/cmake-build-debug/CMakeFiles/2.dir
+/Users/bsnbk/Documents/kbtu-summer/algo/week1/lec1/cmake-build-debug/CMakeFiles/1.dir
