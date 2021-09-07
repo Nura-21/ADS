@@ -1,14 +1,19 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-int main(){
-    stack<int> st;
-    string s;
-    int a,b;
+
+using ll = long long;
+
+int a,b;
+stack <int> st;
+string s;
+int main()
+{
     getline(cin,s);
     stringstream ss(s);
     string word;
-    while(ss >> word){
+    while(ss >> word)
+    {
         if(word == "+")
         {
             a = st.top();
