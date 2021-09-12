@@ -1,0 +1,116 @@
+/////////////////////////////////////////////////////////////////////////////// - 1
+
+
+First algorithms - Eratosphen sieve for prime numbers and Euclid for gcd
+
+GCD - log2(a*b);
+
+Eratosphen: n*ln(ln(n))
+
+Binary exponentiation: a,b - a^b = ?
+
+    1) Naive: a*a*a*a - b times
+    2) 3^10 = (3^5)^2 = ((3^2)^2*3)^2 = ((3*3)^2*3)^2;
+        10 - 5 - 2 - 1 - log2(b) - ceil 3<log2(10)<4 -> floor -> 4
+
+
+/////////////////////////////////////////////////////////////////////////////// - 2
+
+
+Linked List, Doubly linked List
+
+Linked list is a structure that have adress and data.
+
+Basic operations:
+    1) get ith position O(n)
+    2) delete ith position O(n), but if you need to delete, *el it's easy O(1) 
+    3) find x
+    4) insert x -> pos i
+
+/////////////////////////////////////////////////////////////////////////////// - 3
+
+Linear search. Binary search. Time & memory complexity.
+
+
+Bin search: log2(n)
+
+Search problem = find smth with prop...
+
+Ex: Given array a[1...n]
+    Find max of an array:
+    int mx = -inf;
+    for(int i = 0; i < n; i++){
+        if(mx<a[i])
+            mx = a[i];
+    }
+
+    Find index of max:
+    int mx = -1;
+    for(int i = 0; i < n; i++){
+        if(mx==-1 || a[mx]<a[i])
+            mx = i;
+    }
+    Find max among number <=x:
+    int mx = -1;
+    for(int i = 0; i < n; i++){
+        if((mx==-1 || a[mx]<a[i]) && a[i]<=x)
+            mx = i;
+    }
+
+Ex: n = 5; x = 3; 
+    a: (5,4,1,2,4)
+    mx = -1;
+    1: mx = -1;
+    2: mx = 2;
+    3: mx = 3;
+
+Lin search : Time complexity O(n)
+
+Find 2nd largest number:
+    mx1 = -inf;
+    mx2 = -inf;
+    mx2 = -1;
+    a: (5,2,4,6,3,7)
+    mx1 = 5; mx 2 = -inf;
+    mx1 = 5, mx2 = 2;
+          
+    for(int i = 0; i < n; i++){
+        if(a[i]>=mx1){
+            mx2=mx1;
+            mx1=a[i]];
+        }
+        else if(a[i]>mx2){
+            mx2=a[i];
+        }
+    }
+
+
+    Interview problem:
+    47:00
+    Given arr of n ints
+    Given 1<=k<=n
+    Find kth order statistic
+    Naive O(nlogn)
+        sort+[a[k]];
+    Smart: ?
+
+
+
+/////////////////////////////////////////////////////////////////////////////// - 4
+
+Continuation...
+Linear search:
+    Data unsorted
+    O(N)
+Binary search:
+    Binary sorted
+    O(logN)
+
+Asymptotic:
+    In math:
+    (Big O(n) = worst case(upper bound) at most
+    Theta(n) = avarage
+    Omega(n)) = best case(lower bound) at least
+
+Let assume that T(n) = number of operations of algorithm
+    Def: T(n) = O(f(n)) <=> Some C>0: T(n)<=C*f(n), for every n>0

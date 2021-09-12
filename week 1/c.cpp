@@ -2,10 +2,10 @@
 using namespace std;
 
 struct node{
-    int val;
+    long long val;
     node * next;
     node * prev;
-    node(int x){
+    node(long long x){
         val = x;
         next = NULL;
         prev = NULL;
@@ -17,7 +17,7 @@ struct my_deq{
         node * tail;
         node * front;
     public:
-    int val_size = 0;
+    long long val_size = 0;
     my_deq(){
         tail = NULL;
         front = NULL;
@@ -37,7 +37,7 @@ struct my_deq{
         else{cout << "error" << endl;}
     }
 
-    void push_front(int x){
+    void push_front(long long x){
         node * item = new node(x);
         if(front == NULL){
             tail = item;
@@ -51,7 +51,7 @@ struct my_deq{
         cout << "ok" << endl;
     }
 
-    void push_back(int x){
+    void push_back(long long x){
         node * item = new node(x);
         if (front == NULL){
             tail = item;
@@ -96,7 +96,7 @@ struct my_deq{
         return front == NULL;
     }
 
-    int size(){
+    long long size(){
         return val_size;
     }
 
@@ -116,7 +116,7 @@ int main(){
     while(cin >> command){    
         if(command == "size"){cout << deq.size() << endl;}
         else if(command == "clear") {deq.clear();} 
-        else if(command == "exit") {cout << "bye"; return 0;}
+        else if(command == "exit") {cout << "bye"; return 0; break;}
         else if(command == "pop_front") {deq.pop_front(false);}
         else if(command == "pop_back") {deq.pop_back(false);}
         else if(command == "push_back"){ int n; cin >> n; deq.push_back(n);}
