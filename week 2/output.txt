@@ -1,8 +1,4 @@
-can 2
-i 2
-jump 2
-girl 1
-go 1
 he 1
-she 1
-want 1
+i 1
+she 2
+was 2
