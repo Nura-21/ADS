@@ -91,7 +91,7 @@ struct bst{
     }
 
     void change_val(node * current, int n){
-        if(current->left == NULL) current->val + n;
+        if(current->left == NULL) current->val += n;
         change_val(current->left,n);
     }
 
@@ -102,11 +102,6 @@ struct bst{
         change_val(_root,sum);
     }
 
-    void main_solve(){
-        while(count_nodes(_root) != 1){
-            solve(_root);
-        }
-    }
 
     
 
@@ -163,6 +158,9 @@ struct bst{
     void print(){
         print(_root, 0);
     }
+    void solve(){
+        cout << solve(_root);
+    }
 
 };
 
@@ -175,6 +173,6 @@ int main(){
         tree->add(x);
     }
 
-    tree->main_solve();
+    tree->solve();
     cout << sum ;
 }

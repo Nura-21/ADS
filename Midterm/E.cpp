@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 int sum = 0;
+
 struct node{
     int val;
     node * left;
@@ -18,6 +19,8 @@ struct bst{
     int h = 0;
     int cnt = 0;
     node * _root;
+    int s;
+    int a[];
     
     node * add(node * current, int x){
         if(current == NULL) return new node(x);
@@ -49,13 +52,12 @@ struct bst{
         }
     }
 
-    int count_nodes(node * current){
+    void find_full_nodes(node * current){
         if (current != NULL){
-            count_nodes(current->left);
-            cnt++;
-            count_nodes(current->right);
+            find_full_nodes(current->left);
+            if(current->right != NULL and current->left != NULL){cnt++;}
+            find_full_nodes(current->right);
         }   
-        return cnt;
     }
 
     int rightmost(node * current){
@@ -90,24 +92,13 @@ struct bst{
         return rightmost(_root);
     }
 
-    void change_val(node * current, int n){
-        if(current->left == NULL) current->val + n;
-        change_val(current->left,n);
-    }
-
-    int solve(node * current){
-        sum += (leftmost(_root));
-        del(_root,leftmost(_root));
-        sum += (leftmost(_root));
-        change_val(_root,sum);
-    }
-
-    void main_solve(){
-        while(count_nodes(_root) != 1){
-            solve(_root);
+    int solve(node * current, int n){
+        cout << cnt <<" ";
+        for(int i = 1; i < n; ++i){
+                
         }
+        
     }
-
     
 
     node * del(node * current, int x){
@@ -139,8 +130,9 @@ struct bst{
     }
 
 
-    bst(){
+    bst(int n){
         _root = NULL;
+        s = n;
     }
 
     void add(int x){
@@ -167,14 +159,14 @@ struct bst{
 };
 
 int main(){
-
-    bst * tree = new bst();
     int n;
+    cin >> n;
+    bst * tree = new bst(n);
+    
     while(n--){
         int x; cin >> x;
         tree->add(x);
     }
 
-    tree->main_solve();
     cout << sum ;
 }
