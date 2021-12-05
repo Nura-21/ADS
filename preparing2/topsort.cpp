@@ -14,7 +14,7 @@ int a[MAXN][MAXN];
 void dfs(int v){
     used[v] = true;
     for(int i = 0; i < n; ++i){
-        if(a[v][i] == 1 && !used[i]){
+        if(!used[i]){
             dfs(i);
         }
     }
